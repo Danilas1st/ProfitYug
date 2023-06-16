@@ -1,0 +1,74 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.hero 
+		.section_in 
+			.hero_main 
+				.hero_head
+					h1 <span>Профессиональный</span> клининг в Новороссийске, Анапе, Геленджике, Краснодаре, Республике Крым
+				.hero_txt 
+					h2 Мойка фасадов, окон, витрин, балконов по технологии WFP
+				.hero_bottom 
+					.hero_mobil 
+						a(href="#") 
+							+icon('call')
+							p +7 (999) 999 99 99
+					.hero_btn 
+						button(type="button")
+							+icon('mail')
+							p Оставить заявку
+	section.services 
+		.section_in 
+			.services_main 
+				.services_head 
+					h2 Наши услуги
+				.services_list 
+					ul 
+						- for (var i = 0; i < 4; i++)
+							li 
+								.services_btn
+									button(type="button")
+										img(src="i/services/services1.png", alt="alt")
+	section.advantage 
+		.section_in 
+			.advantage_main 
+				.advantage_top
+					.advantage_col_left 
+						.advantage_head 
+							h2 Lorem ipsum dolor sit amet consectetur
+						.advantage_list 
+							ul 
+								- for (var i=0; i<6; i++)
+									li 
+										.advantage_ico 
+											+icon('star')
+										.advantage_txt 
+											p Преимущество
+					.advantage_col_right 
+						img(src="i/advantage.png", alt="")
+				.advantage_bottom
+					.advantage_form 
+						.advantage_form_left 
+							.advantage_form_left_head
+								h4 Lorem ipsum dolor sit amet consectetur:
+							.advantage_form_left_txt
+								p Lorem ipsum dolor sit amet consectetur. Aliquam neque enim enim eu.
+						.advantage_form_right
+							form.advantage_form
+								.advantage_form_input
+									input(type="text" placeholder="Имя")
+								.advantage_form_input
+									input(type="tel" placeholder="Номер телефона")
+								.advantage_form_bottom
+									.advantage_form_btn 
+										button(type="submit") Отправить
+							.advantage_policy!='Отправляя заявку вы соглашаетесь на обработку своих персональных данных и принимаете <a href="#"> Политику Конфиденциальности </a>'
+	section.examples 
+		.section_in 
+			.examples_main
+
+
+
+

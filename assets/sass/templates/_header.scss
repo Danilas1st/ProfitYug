@@ -1,0 +1,32 @@
+.header {
+}
+.section_in {
+}
+.header_main {
+	display: flex;
+	align-items: center;
+	padding-top: 3rem;
+}
+.header_logo {
+	margin-right: 6rem;
+}
+.header_menu {
+	ul {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	li {
+		&:not(:last-child) {
+			margin-right: 4rem;
+		}
+	}
+	a {
+		font-family: $font_2!important;
+		font-size: 1.6rem;
+		color: $darkblue;
+		font-family: $font_1;
+		font-size: 2rem;
+		@include accent-link;
+	}
+}
