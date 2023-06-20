@@ -31,6 +31,7 @@ block content_block
 								.services_btn
 									button(type="button")
 										img(src="i/services/services1.png", alt="alt")
+										p Мойка фасадов
 	section.advantage 
 		.section_in 
 			.advantage_main 
@@ -48,27 +49,210 @@ block content_block
 											p Преимущество
 					.advantage_col_right 
 						img(src="i/advantage.png", alt="")
-				.advantage_bottom
-					.advantage_form 
-						.advantage_form_left 
-							.advantage_form_left_head
-								h4 Lorem ipsum dolor sit amet consectetur:
-							.advantage_form_left_txt
-								p Lorem ipsum dolor sit amet consectetur. Aliquam neque enim enim eu.
-						.advantage_form_right
-							form.advantage_form
-								.advantage_form_input
-									input(type="text" placeholder="Имя")
-								.advantage_form_input
-									input(type="tel" placeholder="Номер телефона")
-								.advantage_form_bottom
-									.advantage_form_btn 
-										button(type="submit") Отправить
-							.advantage_policy!='Отправляя заявку вы соглашаетесь на обработку своих персональных данных и принимаете <a href="#"> Политику Конфиденциальности </a>'
+	section.advantage_form
+		.section_in 
+			.advantage_form_w
+				.advantage_form_left 
+					.advantage_form_left_head
+						h4 Lorem ipsum dolor sit amet consectetur:
+					.advantage_form_left_txt
+						p Lorem ipsum dolor sit amet consectetur. Aliquam neque enim enim eu.
+				.advantage_form_right
+					form.advantage_form_l
+						.advantage_form_input
+							input(type="text" placeholder="Имя")
+						.advantage_form_input
+							input(type="tel" placeholder="Номер телефона")
+						.advantage_form_bottom
+							.advantage_form_btn 
+								button(type="submit") Отправить
+					.advantage_policy_w.advantage_policy
+						.advantage_policy!='Отправляя заявку вы соглашаетесь на обработку своих персональных данных и принимаете <a href="#"> Политику Конфиденциальности </a>'
 	section.examples 
 		.section_in 
 			.examples_main
+				.examples_head 
+					h2 Примеры работ
+				.examples_slider_w
+					.examples_slider.swiper  
+						.swiper-wrapper
+							.swiper-slide 
+								.examples_slide_img
+									img(src="i/examplebefore.png", alt="")
+									.examples_txt 
+										p До
+							.swiper-slide 
+								.examples_slide_img_after
+									img(src="i/exampleafter.png", alt="")
+									.examples_txt_after 
+										p После
+							.swiper-slide 
+								.examples_slide_img
+									img(src="i/examplebefore.png", alt="")
+									.examples_txt 
+										p До
+							.swiper-slide 
+								.examples_slide_img_after
+									img(src="i/exampleafter.png", alt="")
+									.examples_txt_after 
+										p После
+							.swiper-slide 
+								.examples_slide_img
+									img(src="i/examplebefore.png", alt="")
+									.examples_txt 
+										p До
+							.swiper-slide 
+								.examples_slide_img_after
+									img(src="i/exampleafter.png", alt="")
+									.examples_txt_after 
+										p После
+							.swiper-slide 
+								.examples_slide_img
+									img(src="i/examplebefore.png", alt="")
+									.examples_txt 
+										p До
+							.swiper-slide 
+								.examples_slide_img_after
+									img(src="i/exampleafter.png", alt="")
+									.examples_txt_after
+										p После	
+							.swiper-slide 
+								.examples_slide_img
+									img(src="i/examplebefore.png", alt="")
+									.examples_txt 
+										p До
+							.swiper-slide 
+								.examples_slide_img_after
+									img(src="i/exampleafter.png", alt="")
+									.examples_txt_after 
+										p После						
+					.examples_slider_nav 
+						.examples_slider_btn_prewios 
+							button(type="button")
+								+icon('prew')
+						.examples_slider_btn_next 
+							button(type="button")
+								+icon('next')
+		.delimiter_main 
+			img(src="i/delimiter.png", alt="")
+			.thing
+				img(src="i/thing.png", alt="")
+	section.certificate
+		.section_in 
+			.certificate_main 
+				.certificate_head 
+					h2 Сертификаты
+				.certificate_slider_w
+					.certificate_slider.swiper-certificate
+						.swiper-wrapper
+							-for(i = 0; i < 10; i++)
+								.swiper-slide 
+									.certificate_slide_img
+										img(src="i/sertificate/certificate1.png", alt="")
+					.certificate_slider_nav 
+						.certificate_slider_btn_prewios 
+							button(type="button")
+								+icon('prew')
+						.certificate_slider_btn_next 
+							button(type="button")
+								+icon('next')
+	section.order 
+		.section_in 
+			.order_main 
+				.order_head 
+					h2 Порядок работы
+				.order_link_top
+					.order_form
+						.order_form_head 
+							h5 Этап 1: Оставьте заявку
+						form.order_form_form
+							.order_form_input
+								input(type="text" placeholder="Имя")
+							.order_form_input
+								input(type="tel" placeholder="Номер телефона")
+							.order_form_bottom
+								.order_form_btn 
+									button(type="submit") Отправить
+						.order_policy!='Отправляя заявку вы соглашаетесь на обработку своих персональных данных и принимаете <a href="#"> Политику Конфиденциальности </a>'
+					.order_instruction 
+						.order_instruction_head
+							h5 Этап 2:
+						.order_instruction_txt 
+							p Lorem ipsum dolor sit amet consectetur. Tincidunt erat mauris imperdiet nam nulla magna massa viverra fringilla.
+					.order_instruction 
+						.order_instruction_head
+							h5 Этап 3:
+						.order_instruction_txt 
+							p Lorem ipsum dolor sit amet consectetur. Tincidunt erat mauris imperdiet nam nulla magna massa viverra fringilla.
+				.order_link_bottom
+					.order_instruction 
+						.order_instruction_head
+							h5 Этап 4:
+						.order_instruction_txt 
+							p Lorem ipsum dolor sit amet consectetur. Tincidunt erat mauris imperdiet nam nulla magna massa viverra fringilla.
+					.order_instruction 
+						.order_instruction_head
+							h5 Этап 5:
+						.order_instruction_txt 
+							p Lorem ipsum dolor sit amet consectetur. Tincidunt erat mauris imperdiet nam nulla magna massa viverra fringilla.
+					.order_instruction 
+						.order_instruction_head
+							h5 Этап 6:
+						.order_instruction_txt 
+							p Lorem ipsum dolor sit amet consectetur. Tincidunt erat mauris imperdiet nam nulla magna massa viverra fringilla.
+					.order_final 
+						img(src="i/final.png", alt="")
+						p Наслаждайтесь <br>идеальной чистотой!
+	section.about 
+		.section_in 
+			.about_main 
+				.about_col_left 
+					.about_head 
+						h2 Профит-<span>Юг</span> это:
+					.about_txt 
+						p Lorem ipsum dolor sit amet consectetur. Lorem magnis suspendisse libero aliquet neque. Diam ut dictumst sociis amet massa id. Sit platea enim sit nec purus diam rhoncus. Massa non sit ultricies vel sit fringilla.
+						p At magna augue ac pharetra vel. Mauris sit egestas vulputate tincidunt elit est. Ut vitae phasellus metus mi nunc commodo. Fringilla eget diam congue urna quam diam vivamus ut sed. Lorem lacus faucibus semper rhoncus fermentum vel nec ullamcorper. Eget venenatis vulputate molestie lectus porttitor nisl vel elementum.
+						p Nunc condimentum pretium adipiscing vitae praesent. Ac hendrerit venenatis amet a volutpat ullamcorper. Varius blandit lectus sem fermentum ac. Aliquet dignissim nisl mattis gravida lorem dolor enim.
+						p Quis odio donec tempus lorem. Tellus arcu volutpat urna turpis. Pellentesque dictumst euismod egestas id. Duis consectetur velit et bibendum in. Pellentesque nisi faucibus sit aliquam arcu nunc quam dictum.
+				.about_col_right 
+					img(src="i/about.png", alt="")
+	section.contacts 
+		.section_in 
+			.contacts_main_w 
+				.contacts_head.mb6
+					h2 Контакты
+				.contacts_main 
+					.contacts_col_left
+						.contacts_link 
+							.contacts_addres.mb6
+								.contact_addres_icon.contacts_all_icon
+									+icon('mapmark')
+								.contact_addres_txt.add-txt
+									p Адрес
+									a(href="#") Lorem ipsum dolor sit amet consectetur
+							.contacts_mail.mb6
+								.contact_mail_icon.contacts_all_icon
+									+icon('email')
+								.contact_mail_txt.add-txt
+									p E-mail
+									a(href="#") Lorem ipsum dolor sit amet consectetur
+							.contacts_schedule 
+								.contact_schedule_icon.contacts_all_icon
+									+icon('clock')
+								.contact_schedule_txt.add-txt
+									p График работы
+									p Lorem ipsum dolor sit amet consectetur
+					.contacts_col_right 
+						.contacts_mobil 
+							a(href="#") 
+								+icon('call')
+								p +7 (999) 999 99 99
+						.contacts_btn 
+							button(type="button")
+								+icon('mail')
+								p Оставить заявку
+				.contacts_map 
+					.map 
+						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9d09dd4255bc2cf1dc5c854d22f2b73f8922d71431ea04a7606ac4ebe84a7d5a&amp;width=945&amp;height=408&amp;lang=ru_RU&amp;scroll=false"></script>
 
-
-
-
+								

@@ -99,11 +99,6 @@ function getRandom(min, max) {
 	return Math.random() * (max - min) + min;
 }
 
-var styles = ['color: red', 'background: black'].join(';');
-var message = 'Developed by KotoFeelGood Arkada-Studio https://arkada-web.ru/';
-console.info('%c%s', styles, message);
-
-
 
 $(document).ready(function() {
 	const btns = document.querySelectorAll('.btn')
@@ -126,80 +121,6 @@ $(document).ready(function() {
 			})
 	})
 })
-
-
-
-// const btnSubmit = document.querySelectorAll('button[type="submit"]')
-// Array.from(btnSubmit).map((item) => {
-// 	item.addEventListener('click', (e) => {
-// 		e.preventDefault();
-// 		succes('.succes')
-// 	})
-// })
-
-
-// function allDefautAnim(bottom = false, start = '-=30% center', end = 'bottom') {
-// 	const paralaxWrapper = Array.from(document.querySelectorAll('.sec_anim')).map(function(el) {
-// 		const arr = Array.from(el.querySelectorAll('.el_anim')).map(function (item, index) {
-// 			const tl = gsap.timeline();
-// 			ScrollTrigger.create({
-// 				animation: tl,
-// 				trigger: el,
-// 				start: start,
-// 				end: end,
-// 				ease: 'none',
-// 			})
-// 			tl.fromTo(item, {
-// 				y: 100, 
-// 				duration: .4,
-// 				autoAlpha: 0,
-// 			}, {
-// 				y: 0,
-// 				autoAlpha: 1,
-// 				delay: 0.1 + (0.1 * index),
-// 			});
-// 		});
-// 	});
-// }
-
-// function popupForms(pr) {
-
-// 	let popupForms = document.querySelector('.callback')
-// 	let popupFormsTrigger = document.querySelectorAll('.btn_popup')
-// 	let popupFormsClose = document.querySelectorAll('.remove_popup')
-// 	let popupFormsSubmit = popupForms.querySelector('button[type="submit"]')
-// 	const burgerPopup = document.querySelector('.burger')
-	
-// 	Array.from(popupFormsTrigger).map((item) => {
-// 		item.addEventListener('click', () => {
-// 			popupForms.classList.add('active');
-// 			win.style.overflow = "hidden";
-// 			win.style.paddingRight = pr; 
-// 			burgerPopup.classList.remove('active')
-// 		})
-// 	})
-
-
-// 	Array.from(popupFormsClose).map((item) => {
-// 		item.addEventListener('click', () => {
-// 			popupForms.classList.remove('active')
-// 			win.style.overflow = "";
-// 			win.style.paddingRight = ""; 
-// 		})
-// 	})
-
-// 	popupFormsSubmit.addEventListener('click', () => {
-// 		popupForms.classList.remove('active')
-// 		win.style.overflow = "";
-// 		win.style.paddingRight = ""; 
-// 		succes('.succes')
-// 	})
-// }
-
-
-
-
-
 
 
 
@@ -247,49 +168,50 @@ async function maps(street, city, size) {
 
 
 
+const swiper = new Swiper('.swiper', {
+	breakpoints: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+			freeMode: false,
+    },
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+			freeMode: false,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+			slidesPerGroup: 2
+    }
+	},
+	navigation: {
+    nextEl: '.examples_slider_btn_next ',
+    prevEl: '.examples_slider_btn_prewios',
+  }
+});
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const swiperCer = new Swiper('.swiper-certificate', {
+	breakpoints: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+			freeMode: false,
+    },
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+			freeMode: false,
+    },
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 30
+    }
+	},
+	navigation: {
+    nextEl: '.certificate_slider_btn_next ',
+    prevEl: '.certificate_slider_btn_prewios',
+  }
+});
