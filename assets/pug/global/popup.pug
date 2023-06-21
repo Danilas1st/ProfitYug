@@ -1,0 +1,45 @@
+.popup.popup_info(data-id="form")
+	.popup_form_bg.close_popups.remove 
+	.popup_form_i 
+		.popup_close.close_popups.remove 
+			button(type="button")
+				+icon('close') 
+		.popup_top
+			.popup_gallery 
+				.popup_slider--w 
+					.popup_slider--thumb
+						.popup_slider.swiper.mb2
+							.swiper-wrapper 
+								-for(i = 0 ; i < 10; i++)
+									.swiper-slide 
+										img(src="i/gallery/gallery1.png", alt="")
+						.popup_sliderThumb.swiper 
+							.swiper-wrapper
+								-for(i = 0; i < 10; i++) 
+									.swiper-slide.swiper-popup
+										img(src="i/gallery/gallery1.png", alt="")
+			.popup_information
+				.popup_head
+					h3 Мойка окон со сложным доступом
+				.popup_txt 
+					p Lorem ipsum dolor sit amet consectetur. Lorem magnis suspendisse libero aliquet neque. Diam ut dictumst sociis amet massa id. Sit platea enim sit nec purus diam rhoncus. Massa non sit ultricies vel sit fringilla
+					p At magna augue ac pharetra vel. Mauris sit egestas vulputate tincidunt elit est. Ut vitae phasellus metus mi nunc commodo. Fringilla eget diam congue urna quam diam vivamus ut sed. Lorem lacus faucibus semper rhoncus fermentum vel nec ullamcorper. Eget venenatis vulputate molestie lectus porttitor nisl vel elementum.
+					p Nunc condimentum pretium adipiscing vitae praesent. Ac hendrerit venenatis amet a volutpat ullamcorper. Varius blandit lectus sem fermentum ac. Aliquet dignissim nisl mattis gravida lorem dolor enim.
+					p Quis odio donec tempus lorem. Tellus arcu volutpat urna turpis. Pellentesque dictumst euismod egestas id. Duis consectetur velit et bibendum in. Pellentesque nisi faucibus sit aliquam arcu nunc quam dictum.
+					p Pellentesque dictumst euismod egestas id. Duis consectetur velit et bibendum in. Pellentesque nisi faucibus sit aliquam arcu nunc quam dictum.
+					p Lorem ipsum dolor sit amet consectetur. Lorem magnis suspendisse libero aliquet neque. Diam ut dictumst sociis amet massa id. Sit platea enim sit nec purus diam rhoncus. Massa non sit ultricies vel sit fringilla.
+					p Lorem ipsum dolor sit amet consectetur. Lorem magnis suspendisse libero aliquet neque. Diam ut dictumst sociis amet massa id. Sit platea enim sit nec purus diam rhoncus. Massa non sit ultricies vel sit fringilla.
+					p At magna augue ac pharetra vel. Mauris sit egestas vulputate tincidunt elit est. Ut vitae phasellus metus mi nunc commodo. Fringilla eget diam congue urna quam diam vivamus ut sed. Lorem lacus faucibus semper rhoncus fermentum vel nec ullamcorper. Eget venenatis vulputate molestie lectus porttitor nisl vel elementum.
+		.popup_bottom 
+			form.order_form_form
+				.popup_form_input
+					input(type="text" placeholder="Имя")
+				.popup_form_input
+					input(type="tel" placeholder="Номер телефона")
+				.popup_form_bottom
+					.popup_form_btn 
+						button(type="submit") Отправить
+				.popup_policy!='Отправляя заявку вы соглашаетесь на обработку своих персональных данных и принимаете <a href="#"> Политику Конфиденциальности </a>'
+
+
+

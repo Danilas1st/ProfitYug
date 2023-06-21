@@ -19,6 +19,7 @@ $(document).ready(function ($) {
 $(window).on('load', function () {
 	updateSizes();
 	loadFunc();
+	modal();
 });
 
 $(window).on('resize', function () {
@@ -206,12 +207,145 @@ const swiperCer = new Swiper('.swiper-certificate', {
 			freeMode: false,
     },
     640: {
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 30
-    }
+    },
+		1025: {
+			slidesPerView: 4,
+			spaceBetween: 30
+		}
 	},
 	navigation: {
     nextEl: '.certificate_slider_btn_next ',
     prevEl: '.certificate_slider_btn_prewios',
   }
 });
+
+
+
+$(function () {
+  var galleryThumbs = new Swiper(".popup_sliderThumb", {
+    centeredSlides: true,
+    centeredSlidesBounds: true, 
+    direction: "horizontal",
+    spaceBetween: 12,
+    slidesPerView: 2,
+    freeMode: false,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    watchOverflow: true,
+    breakpoints: {
+      480: {
+        direction: "horizontal",
+        slidesPerView: 5
+      }
+    },
+		navigation: {
+			prevEl: '.prev',
+			nextEl: '.next'
+		}
+  });
+  var galleryTop = new Swiper(".popup_slider ", {
+    direction: "horizontal",
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    a11y: {
+      prevSlideMessage: "Previous slide",
+      nextSlideMessage: "Next slide",
+    },
+    keyboard: {
+      enabled: true,
+    },
+    thumbs: {
+      swiper: galleryThumbs
+    }
+  });
+  galleryTop.on("slideChangeTransitionStart", function () {
+    galleryThumbs.slideTo(galleryTop.activeIndex);
+  });
+  galleryThumbs.on("transitionStart", function () {
+    galleryTop.slideTo(galleryThumbs.activeIndex);
+  });
+});
+
+
+
+function modal() {
+	let popup = document.querySelectorAll('.popup')
+	let btnArray = document.querySelectorAll('.trigger')
+	
+	btnArray.forEach((el) => {
+		el.addEventListener('click', function(e) {
+			e.preventDefault();
+			let path = e.currentTarget.dataset.target
+			
+			popup.forEach((el) => {
+				isRemove(el)
+				console.log('Good')
+				if(el.dataset.id == path) {
+					isOpen(el)
+				}
+			})
+			
+		})
+	})
+	
+
+	popup.forEach((pop) => {
+		let remove = pop.querySelectorAll('.remove')
+		remove.forEach(el => {
+			el.addEventListener('click', (e) => {
+				isRemove(pop);
+			})
+		});
+	})
+}
+
+
+
+function isOpen(popup) {
+	document.body.classList.add('fixed')
+	popup.classList.add('active')
+}
+
+function isRemove(popup) {
+	popup.classList.remove('active')
+	document.body.classList.remove('fixed')
+}
+
+
+
+
+function AnimateWindow() {
+	const background = document.querySelector('.delimiter_main img')
+	const thin = document.querySelector('.thing')
+	const observer = new IntersectionObserver(entries => {
+		// console.log(entries)
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				animateBackground(background, thin)
+			}
+		});
+	})
+
+	observer.observe(background)
+
+
+	// console.log('ok')
+}
+
+function animateBackground(anim, thin) {
+
+	// anim.style.transform  = "translateX(0)"
+	thin.style.left  = "96.5%"
+	
+}
+
+
+
+
+
+AnimateWindow()

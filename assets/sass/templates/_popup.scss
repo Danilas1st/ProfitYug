@@ -1,0 +1,224 @@
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	@include flex-center;
+	width: 100%;
+	height: 100%;
+	@include z-index(popup);
+	transition: all .2s ease;
+	opacity: 0;
+	visibility: hidden;
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+.popup_info {
+}
+.popup_form_bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(0deg, rgba(2, 2, 2, 0.8), rgba(2, 2, 2, 0.8)), #f5f5f550;
+}
+.close_popups {
+}
+.remove {
+}
+.popup_form_i {
+	position: relative;
+	max-width: 119rem;
+	padding: 7rem 4rem 7rem 7rem;
+	background: $white;
+	z-index: 3;
+	border-radius: 2rem;
+	@include bp($point_2) {
+		max-width: 85rem;
+		padding: 2rem 6rem 3rem 3rem;
+	}
+}
+.popup_close {
+	position: absolute;
+	top: 2.5rem;
+	right: 2.5rem;
+}
+.icon {
+}
+.icon-close {
+	fill: $orange!important;
+}
+.popup_top {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 8rem;
+	@include bp($point_2) {
+		margin-bottom: 2rem;
+	}
+}
+.mb2 {
+	margin-bottom: 2rem;
+}
+.popup_gallery {
+	max-width: 34.8rem;
+}
+.popup_slider--w {
+}
+.popup_slider--thumb {
+	max-width: 34.8rem;
+	@include bp($point_2) {
+		max-width: 28.8rem;
+	}
+}
+.popup_thumbNavigation {
+}
+.nav-btn {
+}
+.prev {
+}
+.icon-prew {
+}
+.next {
+}
+.icon-next {
+}
+.popup_sliderThumb {
+	pointer-events: none;
+}
+.swiper {
+}
+.swiper-wrapper {
+	height: auto!important;
+}
+.swiper-slide {
+}
+.swiper-popup {
+	width: 6rem!important;
+	height: 6rem;
+	margin-right: 1.2rem;
+	border-radius: .7rem;
+	overflow: hidden;
+}
+.swiper-slide-thumb-active {
+	position: relative;
+	&:before {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(0deg, rgba(1, 114, 255, 0.5), rgba(1, 114, 255, 0.5));
+		z-index: 3;
+		border-radius: .7rem;
+	}
+}
+.popup_slider {
+	border-radius: 2rem;
+	overflow: hidden;
+}
+.popup_information {
+	max-width: 62.2rem;
+	padding-right: 6rem;
+	@include bp($point_2) {
+		max-width: 44rem;
+		padding-right: 0;
+	}
+}
+.popup_head {
+	margin-bottom: 3rem;
+	h3 {
+		font-size: 2.6rem;
+		color: $blue;
+	}
+}
+.popup_txt {
+	max-height: 36.8rem;
+	overflow-y: scroll;
+	padding-right: 6rem;
+	p {
+		font-size: 1.6rem;
+		color: $darkblue;
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+	@include bp($point_2) {
+		max-height: 27.2rem;
+	}
+}
+.popup_bottom {
+	max-width: 115rem;
+}
+.popup_form_form {
+}
+.popup_form_input {
+	margin-right: 2.1rem;
+	input {
+		@include app;
+		border: .1rem solid $grey;
+		padding: 2.5rem;
+		border-radius: 3.8rem;
+		max-width: 24.5rem;
+		font-family: $font_2;
+		font-size: 1.6rem;
+	}
+	@include bp($point_2) {
+		margin-right: 1rem;
+		input {
+			max-width: 20rem;
+			padding: 1.8rem;
+			font-size: 1.4rem;
+		}
+	}
+}
+.popup_form_bottom {
+	margin-right: 2.1rem;
+	@include bp($point_2) {
+		margin-right: 1rem;
+	}
+}
+.popup_form_btn {
+	button, input[type="submit"] {
+		background: $orange;
+		width: 16.2rem;
+		padding: 2.5rem 0;
+		border-radius: 3.8rem;
+		font-family: $font_2;
+		color: $white;
+		font-size: 1.6rem;
+		transition: all .4s ease;
+		&:hover {
+			background: $lightorange;
+		}
+	}
+	@include bp($point_2) {
+		button, input[type="submit"] {
+			padding: 1.8rem 0;
+		}
+	}
+}
+.popup_policy {
+	max-width: 33rem;
+	text-align: left;
+	font-size: 1.2rem;
+}
+
+.popup_txt::-webkit-scrollbar-track
+{
+	background-color: rgba(1, 114, 255, 0.2);
+}
+
+.popup_txt::-webkit-scrollbar
+{
+	width: .2rem;
+	background-color: rgba(1, 114, 255, 0.2);
+}
+
+.popup_txt::-webkit-scrollbar-thumb
+{
+	background-color: $blue;
+}

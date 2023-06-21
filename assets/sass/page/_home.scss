@@ -15,6 +15,9 @@
 }
 .hero_main {
 	padding: 22rem 0 25.9rem 0;
+	@include bp($point_2) {
+		padding: 8rem 0 10rem 0;
+	}
 }
 .hero_head {
 	max-width: 67rem;
@@ -37,26 +40,36 @@
 	margin-right: 3.5rem;
 	display: flex;
 	justify-content: center;
-	border-radius: 3.8rem;
-	overflow: hidden;
-	box-shadow: 0rem 1rem 4rem $orange;
+	position: relative;
+	z-index: 2;
+	&:before {
+		position: absolute;
+		content: '';
+		width: 80%;
+		height: 3.6rem;
+		bottom: -.8rem;
+		background-color: $orange;
+		opacity: .7;
+		filter: blur(1rem);
+		pointer-events: none;
+	}
 	a {
-		width: 25.1rem;
 		background: $orange;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 2.2rem 0;
+		padding: 2.5rem 3.6rem;
 		color: $white;
 		font-size: 1.6rem;
 		font-family: $font_2;
 		transition: all .4s ease;
-	}
-	&:hover {
-		box-shadow: 0rem 1rem 4rem $lightorange;
-		a {
+		border-radius: 3.8rem;
+		&:hover {
 			background: $lightorange;
-		}
+			&:before {
+				background-color: $lightorange;
+			}
+	}
 	}
 }
 .icon {
@@ -70,20 +83,32 @@
 		background: $blue;
 		display: flex;
 		align-items: center;
-		width: 25.1rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 2.2rem 0;
+		padding: 2.5rem 3.5rem;
 		color: $white;
 		font-size: 1.6rem;
 		font-family: $font_2;
 		transition: all .4s ease;
 		border-radius: 3.8rem;
-		box-shadow: 0 1rem 4rem $blue;
+		position: relative;
+		&:before {
+			position: absolute;
+			content: '';
+			width: 21.1rem;
+			height: 3.6rem;
+			bottom: -.8rem;
+			background-color: $blue;
+			opacity: .7;
+			filter: blur(1rem);
+			transition: all .4s ease;
+		}
 		&:hover {
 			background: $lightblue;
-			box-shadow: 0rem 1rem 4rem $lightblue;
+			&:before {
+				background-color: $lightblue;
+			}
 		}
 	}
 }
@@ -94,10 +119,16 @@
 }
 .services_main {
 	padding: 13.8rem 0;
+	@include bp($point_2) {
+		padding: 8rem 0;
+	}
 }
 .services_head {
 	text-align: center;
 	margin-bottom: 11.8rem;
+	@include bp($point_2) {
+		margin-bottom: 6rem;
+	}
 }
 .services_list {
 	ul {
@@ -113,6 +144,11 @@
 			border: .2rem solid $orange;
 		}
 	}
+	@include bp($point_2) {
+		ul {
+			grid-template-columns: repeat(auto-fill, minmax(22%, 1fr));
+		}
+	}
 }
 .services_btn {
 	position: relative;
@@ -123,7 +159,16 @@
 		font-size: 2.6rem;
 		font-family: $font_2;
 		color: #2F68AC;
-
+	}
+	button {
+		width: 100%;
+	}
+	@include bp($point_2) {
+		p {
+			top: 50%;
+			transform: translateY(-50%);
+			left: 0;
+		}
 	}
 }
 .advantage {
@@ -153,6 +198,9 @@
 		display: flex;
 		align-items: center;
 	}
+	@include bp($point_2) {
+		min-width: 80rem;
+	}
 }
 .advantage_ico {
 	margin-right: 2.4rem;
@@ -172,6 +220,9 @@
 	position: absolute;
 	top: 0;
 	right: 0;
+	@include bp($point_2) {
+		display: none;
+	}
 }
 
 .advantage_form {
@@ -194,6 +245,11 @@
 	h4 {
 		color: $white;
 		font-size: 2.6rem;
+	}
+	@include bp($point_2) {
+		h4 {
+			font-size: 2rem;
+		}
 	}
 }
 .advantage_form_left_txt {
@@ -245,15 +301,24 @@
 	a {
 		color: $white;
 	}
+	@include bp($point_2) {
+		margin-left: 9rem;
+	}
 }
 .examples {
 }
 .examples_main {
 	padding: 13.8rem 0;
+	@include bp($point_2) {
+		padding: 8rem 0;
+	}
 }
 .examples_head {
 	text-align: center;
 	margin-bottom: 11.8rem;
+	@include bp($point_2) {
+		margin-bottom: 6rem;
+	}
 }
 .examples_slider_w {
 	position: relative;
@@ -342,18 +407,44 @@
 }
 .delimiter_main {
 	position: relative;
+	height: 10rem;
+	@include flex-start;
+	&>img {
+		width: 97%;
+		height: 100%;
+		z-index: 1;
+	}
 }
 .thing {
 	position: absolute;
-	top: 0;
+	left: 0;
+	transition: all 8s;
+	z-index: 33;
+	background-color: #fff;
+	width: 100%;
+	img {
+		width: 5.7rem;
+		height: 10.3rem;
+	}
+	@include bp($point_2) {
+		img {
+			width: 2.9rem;
+		}
+	}
 }
 .certificate {
 }
 .certificate_main {
 	padding: 13.8rem 0;
+	@include bp($point_2) {
+		padding: 8rem 0;
+	}
 }
 .certificate_head {
 	margin-bottom: 11.8rem;
+	@include bp($point_2) {
+		margin-bottom: 6rem 0;
+	}
 }
 .certificate_slider_w {
 	position: relative;
@@ -367,7 +458,7 @@
 }
 .certificate_slide_img {
 	background: $lightgrey;
-	width: 32rem;
+	max-width: 32rem;
 	height: 32rem;
 	display: flex;
 	align-items: center;
@@ -417,6 +508,10 @@
 	display: flex;
 	align-items: center;
 	margin-bottom: 7rem;
+	@include bp($point_2) {
+		flex-direction: column;
+		margin-bottom: 0;
+	}
 }
 .order_form {
 	max-width: 79.4rem;
@@ -435,6 +530,16 @@
 		width: 1.7rem;
 		height: 2.9rem;
 		right: -4.5rem;
+	}
+	@include bp($point_2) {
+		margin-right: 0;
+		margin-bottom: 6rem;
+		&:before {
+			right: 50%;
+			transform: translateX(-50%);
+			transform: rotate(90deg);
+			top: 26.5rem;
+		}
 	}
 }
 .order_form_form {
@@ -480,6 +585,7 @@
 }
 .order_policy {
 	font-size: 1.2rem;
+	padding: 0 10rem;
 	text-align: center;
 }
 .order_instruction {
@@ -497,8 +603,8 @@
 		}
 	}
 	background: $white;
-	width: 25rem;
-	height: 25rem;
+	max-width: 25rem;
+	min-height: 25rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -506,6 +612,37 @@
 	border-radius: 2rem;
 	padding: 0 3rem;
 	position: relative;
+	@include bp($point_2) {
+		&:not(:nth-child(3)) {
+			margin-right: 0;
+			&:before {
+				right: 50%;
+				transform: translateX(-50%);
+				transform: rotate(90deg);
+				top: 26.5rem;
+			}
+		}
+		max-width: 79.4rem;
+		margin-bottom: 6rem;
+		&:nth-child(3) {
+			&:before {
+				position: absolute;
+				content: '';
+				background: url('../../i/next.png') center/cover no-repeat;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 1.7rem;
+				height: 2.9rem;
+				right: -4.5rem;
+			}
+			&:before {
+				right: 50%;
+				transform: translateX(-50%);
+				transform: rotate(90deg);
+				top: 26.5rem;
+			}
+		}
+	}
 }
 .order_instruction_head {
 	margin-bottom: 3rem;
@@ -521,6 +658,10 @@
 }
 .order_link_bottom {
 	display: flex;
+	align-items: center;
+	@include bp($point_2) {
+		flex-direction: column;
+	}
 }
 .order_final {
 	margin-left: 7rem;
@@ -548,6 +689,13 @@
 		font-family: $font_2;
 		font-size: 2.6rem;
 	}
+	@include bp($point_2) {
+		margin-left: 0;
+		min-width: 79.4rem;
+		&:before {
+			display: none;
+		}
+	}
 }
 .about {
 }
@@ -558,6 +706,9 @@
 	justify-content: space-between;
 	border: .2rem solid $orange;
 	border-radius: 2rem;
+	@include bp($point_2) {
+		margin: 8rem 0;
+	}
 }
 .about_col_left {
 	max-width: 62.2rem;
@@ -583,6 +734,9 @@
 		border-radius: 2rem;
 		overflow: hidden;
 	}
+	@include bp($point_2) {
+		display: none;
+	}
 }
 .contacts {
 	background: #F1F5FA;
@@ -590,6 +744,9 @@
 }
 .contacts_main_w {
 	padding: 16rem 0;
+	@include bp($point_2) {
+		padding: 6rem 0;
+	}
 }
 .contacts_main {
 	display: flex;
@@ -680,6 +837,9 @@
 	top: 50%;
 	transform: translateY(-50%);
 	right: 0;
+	@include bp($point_2) {
+		display: none;
+	}
 }
 .map {
 }

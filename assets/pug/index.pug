@@ -15,7 +15,7 @@ block content_block
 						a(href="#") 
 							+icon('call')
 							p +7 (999) 999 99 99
-					.hero_btn 
+					.hero_btn.trigger(data-target="form")
 						button(type="button")
 							+icon('mail')
 							p Оставить заявку
@@ -28,7 +28,7 @@ block content_block
 					ul 
 						- for (var i = 0; i < 4; i++)
 							li 
-								.services_btn
+								.services_btn.trigger(data-target="form")
 									button(type="button")
 										img(src="i/services/services1.png", alt="alt")
 										p Мойка фасадов
@@ -247,7 +247,7 @@ block content_block
 							a(href="#") 
 								+icon('call')
 								p +7 (999) 999 99 99
-						.contacts_btn 
+						.contacts_btn.trigger(data-target="form")
 							button(type="button")
 								+icon('mail')
 								p Оставить заявку

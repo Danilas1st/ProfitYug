@@ -10,6 +10,9 @@
 }
 .footer_logo {
 	margin-right: 57.5rem;
+	@include bp($point_2) {
+		margin-right: 11.5rem;
+	}
 }
 .footer_policy {
 	margin-right: 6rem;
