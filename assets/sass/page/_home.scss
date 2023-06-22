@@ -262,6 +262,12 @@
 			grid-gap: 3rem 9.8rem;
 		}
 	}
+	@include bp(821px) {
+		ul {
+			grid-template-columns: repeat(auto-fill, minmax(20% 1fr));
+			grid-gap: 3rem 7.8rem;
+		}
+	}
 	@include bp(769px) {
 		ul {
 			grid-template-columns: repeat(auto-fill, minmax(29%, 1fr));
@@ -933,6 +939,10 @@
 	@include bp(1367px) {
 		flex-direction: column;
 	}
+	@include bp(821px) {
+		display: flex;	
+		flex-direction: row;
+	}
 	@include bp(769px) {
 		display: flex;	
 		flex-direction: row;
@@ -1040,7 +1050,20 @@
 	top: 50%;
 	transform: translateY(-50%);
 	right: 0;
+	width: 94.5rem;
+	height: 40.8rem;
+	@include bp(1367px) {
+		width: 130rem;
+		height: 69.8rem;
+	}
 	@include bp($point_2) {
+		width: 70.5rem;
+		height: 67rem;
+	}
+	@include bp(821px) {
+		display: none;
+	}
+	@include bp($point_5) {
 		display: none;
 	}
 }
