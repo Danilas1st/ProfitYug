@@ -17,6 +17,9 @@
 	@include bp($point_2) {
 		margin-right: 11.5rem;
 	}
+	@include bp(769px) {
+		margin-right: 4.5rem;	
+	}
 	@include bp($point_5) {
 		margin: 0 0 2rem 0;	
 	}
@@ -37,6 +40,9 @@
 .icon {
 }
 .icon-policy {
+	@include bp(769px) {
+	margin: 0;	
+	}
 }
 .footer_licence {
 	margin-right: 6rem;

@@ -206,6 +206,12 @@
 			left: 0;
 		}
 	}
+	@include bp(769px) {
+		p {
+			top: 25%;
+			left: 2rem;
+		}
+	}
 	@include bp(821px) {
 		p {
 			font-size: 2rem;
@@ -254,6 +260,11 @@
 		ul {
 			grid-template-columns: repeat(auto-fill, minmax(18%, 1fr));
 			grid-gap: 3rem 9.8rem;
+		}
+	}
+	@include bp(769px) {
+		ul {
+			grid-template-columns: repeat(auto-fill, minmax(29%, 1fr));
 		}
 	}
 	@include bp($point_5) {
@@ -661,6 +672,9 @@
 			top: 26.5rem;
 		}
 	}
+	@include bp(769px) {
+		padding: 4rem 2rem;
+	}
 	@include bp($point_5) {
 		height: auto;	
 		&::before {
@@ -849,6 +863,9 @@
 			display: none;
 		}
 	}
+	@include bp(769px) {
+		min-width: 72.8rem;	
+	}
 	@include bp($point_5) {
 		min-width: 30rem;
 		p {
@@ -915,6 +932,10 @@
 	display: flex;
 	@include bp(1367px) {
 		flex-direction: column;
+	}
+	@include bp(769px) {
+		display: flex;	
+		flex-direction: row;
 	}
 	@include bp($point_5) {
 		flex-direction: column;	
