@@ -16,7 +16,7 @@ block content_block
 							+icon('call')
 							p +7 (999) 999 99 99
 					.hero_btn.trigger(data-target="form")
-						button(type="button")
+						a(href="#") 
 							+icon('mail')
 							p Оставить заявку
 	section.services 
@@ -148,7 +148,8 @@ block content_block
 							-for(i = 0; i < 10; i++)
 								.swiper-slide 
 									.certificate_slide_img
-										img(src="i/sertificate/certificate1.png", alt="")
+										a(href="i/sertificate/certificate1.png" data-fancybox="img") 
+											img(src="i/sertificate/certificate1.png", alt="")
 					.certificate_slider_nav 
 						.certificate_slider_btn_prewios 
 							button(type="button")
