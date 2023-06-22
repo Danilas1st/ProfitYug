@@ -31,7 +31,7 @@
 					p Lorem ipsum dolor sit amet consectetur. Lorem magnis suspendisse libero aliquet neque. Diam ut dictumst sociis amet massa id. Sit platea enim sit nec purus diam rhoncus. Massa non sit ultricies vel sit fringilla.
 					p At magna augue ac pharetra vel. Mauris sit egestas vulputate tincidunt elit est. Ut vitae phasellus metus mi nunc commodo. Fringilla eget diam congue urna quam diam vivamus ut sed. Lorem lacus faucibus semper rhoncus fermentum vel nec ullamcorper. Eget venenatis vulputate molestie lectus porttitor nisl vel elementum.
 		.popup_bottom 
-			form.order_form_form
+			form.popup_form_form
 				.popup_form_input
 					input(type="text" placeholder="Имя")
 				.popup_form_input
@@ -42,4 +42,23 @@
 				.popup_policy!='Отправляя заявку вы соглашаетесь на обработку своих персональных данных и принимаете <a href="#"> Политику Конфиденциальности </a>'
 
 
+
+.popup.popup_menu(data-id="menu")
+	.popup_form_bg_m.close_popups.remove 
+	.popup_form_m
+		.popup_close_m.close_popups.remove 
+			button(type="button")
+				+icon('close')
+		.popup_menu_head 
+			.popup_logo.remove
+				a(href="#")
+					img(src="i/logo.png", alt="")
+		.popup_menu 
+			ul
+				each item in ['Услуги', 'Галерея', 'Сертификаты', 'Порядок работы', 'О нас', 'Контакты']
+					li.remove
+						a(href="#")=item 
+		.popup_tel.remove
+			a(href="#")
+				p  +7 (999) 999 99 99
 

@@ -18,12 +18,21 @@
 	@include bp($point_2) {
 		padding: 8rem 0 10rem 0;
 	}
+	@include bp($point_5) {
+		padding: 6rem 0;
+	}
 }
 .hero_head {
 	max-width: 67rem;
 	margin-bottom: 6rem;
 	span {
 		color: $orange;
+	}
+	@include bp($point_5) {
+		margin-bottom: 3rem;
+		h1 {
+			font-size: 2.2rem;
+		}
 	}
 }
 .hero_txt {
@@ -32,9 +41,17 @@
 	h2 {
 		font-size: 2.6rem;
 	}
+	@include bp($point_5) {
+		h2 {
+			font-size: 2rem;
+		}
+	}
 }
 .hero_bottom {
 	display: flex;
+	@include bp($point_5) {
+		flex-direction: column;	
+	}
 }
 .hero_mobil {
 	margin-right: 3.5rem;
@@ -69,7 +86,16 @@
 			&:before {
 				background-color: $lightorange;
 			}
+		}
 	}
+	@include bp($point_5) {
+		margin: 0 0 3rem 0;	
+		&:before {
+			width: 80%;
+		}
+		a {
+			width: 100%;
+		}
 	}
 }
 .icon {
@@ -111,6 +137,14 @@
 			}
 		}
 	}
+	@include bp($point_5) {
+		button, input[type="submit"] {
+			width: 100%;
+			&:before {
+				width: 80%;
+			}
+		}	
+	}
 }
 .icon-mail {
 	margin-right: 1rem;
@@ -149,6 +183,11 @@
 			grid-template-columns: repeat(auto-fill, minmax(22%, 1fr));
 		}
 	}
+	@include bp($point_5) {
+		ul {
+			grid-template-columns: repeat(auto-fill, minmax(43%, 1fr));
+		}
+	}
 }
 .services_btn {
 	position: relative;
@@ -160,9 +199,6 @@
 		font-family: $font_2;
 		color: #2F68AC;
 	}
-	button {
-		width: 100%;
-	}
 	@include bp($point_2) {
 		p {
 			top: 50%;
@@ -170,6 +206,18 @@
 			left: 0;
 		}
 	}
+	@include bp(821px) {
+		p {
+			font-size: 2rem;
+		}
+	}
+	@include bp($point_5) {
+		p {
+			font-size: 1.2rem;
+			top: 20%;
+			left: 1rem;
+		}
+	} 
 }
 .advantage {
 	background: #F1F5FA;
@@ -181,6 +229,9 @@
 }
 .advantage_col_left {
 	padding-top: 12.4rem;
+	@include bp($point_5) {
+		padding-top: 6rem;
+	} 
 }
 .advantage_head {
 	max-width: 49rem;
@@ -200,6 +251,11 @@
 	}
 	@include bp($point_2) {
 		min-width: 80rem;
+	}
+	@include bp($point_5) {
+		ul {
+			grid-template-columns: repeat(auto-fill, minmax(39%, 1fr));
+		}	
 	}
 }
 .advantage_ico {
@@ -237,8 +293,20 @@
 	align-items: center;
 	padding: 6rem 0;
 	justify-content: space-between;
+	@include bp(821px) {
+		flex-direction: column;
+	}
+	@include bp($point_5) {
+		flex-direction: column;	
+	}
 }
 .advantage_form_left {
+	@include bp(821px) {
+		margin-bottom: 3rem;
+	}
+	@include bp($point_5) {
+		margin-bottom: 3rem;	
+	}
 }
 .advantage_form_left_head {
 	margin-bottom: 2rem;
@@ -263,6 +331,12 @@
 	align-items: center;
 	justify-content: flex-end;
 	margin-bottom: 3rem;
+	@include bp(821px) {
+		justify-content: center;
+	}
+	@include bp($point_5) {
+		flex-direction: column	
+	}
 }
 .advantage_form_input {
 	input {
@@ -276,6 +350,13 @@
 		font-family: $font_2;
 		&::-webkit-input-placeholder {
 			color: #2F68AC;
+		}
+	}
+	@include bp($point_5) {
+		input {
+			max-width: 35rem;
+			width: 100%;
+			margin-bottom: 2rem;
 		}
 	}
 }
@@ -292,6 +373,12 @@
 			background: $lightorange;
 		}
 	}
+	@include bp($point_5) {
+		width: 32.6rem;
+		button, input[type="submit"] {
+			width: 100%;
+		}	
+	}
 }
 .advantage_policy {
 	margin-left: 21rem;
@@ -304,6 +391,15 @@
 	@include bp($point_2) {
 		margin-left: 9rem;
 	}
+	@include bp(821px) {
+		text-align: center;
+		margin: 0;
+		padding: 0 8rem;
+	}
+	@include bp($point_5) {
+		margin: 0;
+		text-align: center;	
+	}
 }
 .examples {
 }
@@ -311,6 +407,9 @@
 	padding: 13.8rem 0;
 	@include bp($point_2) {
 		padding: 8rem 0;
+	}
+	@include bp($point_5) {
+		padding: 6rem 0;
 	}
 }
 .examples_head {
@@ -414,6 +513,9 @@
 		height: 100%;
 		z-index: 1;
 	}
+	@include bp($point_5) {
+		display: none;	
+	}
 }
 .thing {
 	position: absolute;
@@ -439,11 +541,14 @@
 	@include bp($point_2) {
 		padding: 8rem 0;
 	}
+	@include bp($point_5) {
+		padding: 6rem 0;	
+	}
 }
 .certificate_head {
 	margin-bottom: 11.8rem;
 	@include bp($point_2) {
-		margin-bottom: 6rem 0;
+		margin-bottom: 6rem;
 	}
 }
 .certificate_slider_w {
@@ -500,9 +605,15 @@
 }
 .order_main {
 	padding: 13.8rem 0;
+	@include bp($point_5) {
+		padding: 6rem 0;	
+	}
 }
 .order_head {
 	margin-bottom: 11.8rem;
+	@include bp($point_5) {
+		margin-bottom: 3rem;	
+	}
 }
 .order_link_top {
 	display: flex;
@@ -541,17 +652,31 @@
 			top: 26.5rem;
 		}
 	}
+	@include bp($point_5) {
+		height: auto;	
+		&::before {
+			top: 45.5rem;
+		}
+	}
 }
 .order_form_form {
 	display: flex;
 	align-items: center;
 	margin-bottom: 2.7rem;
+	@include bp($point_5) {
+		flex-direction: column;	
+	}
 }
 .order_form_head {
 	text-align: center;
 	margin-bottom: 2.7rem;
 	h5 {
 		font-size: 2.6rem;
+	}
+	@include bp($point_5) {
+		h5 {
+			font-size: 2rem;
+		}	
 	}
 }
 .order_form_input {
@@ -564,6 +689,13 @@
 		max-width: 24.5rem;
 		font-family: $font_2;
 		font-size: 1.6rem;
+	}
+	@include bp($point_5) {
+		margin-right: 0;
+		margin-bottom: 2rem;
+		input {
+			padding: 1.5rem;
+		}	
 	}
 }
 .order_form_bottom {
@@ -581,12 +713,19 @@
 		&:hover {
 			background: $lightorange;
 		}
+		@include bp($point_5) {
+				width: 24.5rem;
+				padding: 1.5rem;
+		}
 	}
 }
 .order_policy {
 	font-size: 1.2rem;
 	padding: 0 10rem;
 	text-align: center;
+	@include bp($point_5) {
+		padding: 0;
+	}
 }
 .order_instruction {
 	&:not(:nth-child(3)) {
@@ -649,6 +788,11 @@
 	h5 {
 		font-size: 2.6rem;
 	}
+	@include bp($point_5) {
+		h5 {
+			font-size: 2rem;
+		}	
+	}
 }
 .order_instruction_txt {
 	p {
@@ -696,6 +840,12 @@
 			display: none;
 		}
 	}
+	@include bp($point_5) {
+		min-width: 30rem;
+		p {
+			font-size: 2rem;
+		}
+	}
 }
 .about {
 }
@@ -708,6 +858,10 @@
 	border-radius: 2rem;
 	@include bp($point_2) {
 		margin: 8rem 0;
+	}
+	@include bp($point_5) {
+		margin: 6rem 0;	
+		padding: 3rem 1.5rem;
 	}
 }
 .about_col_left {
@@ -750,13 +904,22 @@
 }
 .contacts_main {
 	display: flex;
+	@include bp($point_5) {
+		flex-direction: column;	
+	}
 }
 .contacts_col_left {
+	@include bp($point_5) {
+		margin-bottom: 3rem;	
+	}
 }
 .contacts_head {
 }
 .contacts_link {
 	margin-right: 11rem;
+	@include bp($point_5) {
+		margin: 0;	
+	}
 }
 .contacts_addres {
 	display: flex;
@@ -800,15 +963,14 @@
 	margin-bottom: 3rem;
 	display: flex;
 	justify-content: center;
-	border-radius: 3.8rem;
-	overflow: hidden;
 	a {
-		width: 25.1rem;
+		padding: 2.5rem 3.5rem;
+		border-radius: 3.8rem;
 		background: $orange;
 		display: flex;
 		align-items: center;
+		width: 100%;
 		justify-content: center;
-		padding: 2.2rem 0;
 		color: $white;
 		font-size: 1.6rem;
 		font-family: $font_2;
@@ -820,11 +982,11 @@
 		background: $blue;
 		display: flex;
 		align-items: center;
-		width: 25.1rem;
+		padding: 2.5rem 3.5rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 2.2rem 0;
+		width: 100%;
 		color: $white;
 		font-size: 1.6rem;
 		font-family: $font_2;

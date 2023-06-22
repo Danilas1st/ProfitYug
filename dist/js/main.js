@@ -172,12 +172,13 @@ async function maps(street, city, size) {
 const swiper = new Swiper('.swiper', {
 	breakpoints: {
     320: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 50,
 			freeMode: false,
+			slidesPerGroup: 1
     },
     480: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 50,
 			freeMode: false,
     },
@@ -197,7 +198,7 @@ const swiper = new Swiper('.swiper', {
 const swiperCer = new Swiper('.swiper-certificate', {
 	breakpoints: {
     320: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 50,
 			freeMode: false,
     },
