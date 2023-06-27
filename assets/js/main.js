@@ -20,6 +20,7 @@ $(window).on('load', function () {
 	updateSizes();
 	loadFunc();
 	modal();
+	popupSlide();
 });
 
 $(window).on('resize', function () {
@@ -224,7 +225,7 @@ const swiperCer = new Swiper('.swiper-certificate', {
 
 
 
-$(function () {
+function popupSlide() {
   var galleryThumbs = new Swiper(".popup_sliderThumb", {
     centeredSlides: true,
     centeredSlidesBounds: true, 
@@ -270,7 +271,7 @@ $(function () {
   galleryThumbs.on("transitionStart", function () {
     galleryTop.slideTo(galleryThumbs.activeIndex);
   });
-});
+}
 
 
 
@@ -289,8 +290,7 @@ function modal() {
 				if(el.dataset.id == path) {
 					isOpen(el)
 				}
-			})
-			
+			})			
 		})
 	})
 	
